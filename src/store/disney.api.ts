@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/dist/query/react'
-import { CharactersListResponse } from '../models/disney'
+import { CharactersListResponse, DisneyCharacter } from '../models/disney'
 
 export const disneyApi = createApi({
   reducerPath: 'disney/api',
@@ -12,8 +12,13 @@ export const disneyApi = createApi({
       query: () => ({
         url: 'characters'
       })
+    }),
+    character: build.query<DisneyCharacter, number>({
+      query: id => ({
+        url: `characters/${id}`
+      })
     })
   })
 })
 
-export const { useDisneyItemsQuery } = disneyApi
+export const { useDisneyItemsQuery, useLazyCharacterQuery } = disneyApi
