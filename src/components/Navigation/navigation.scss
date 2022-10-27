@@ -1,0 +1,22 @@
+@import '../../styles/color';
+
+.navigation{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    span{
+        display: flex;
+        gap: 50px;
+    }
+    a{
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        border-bottom: 3px solid transparent;
+        transition: all 0.3s ease-in;
+        &:hover{
+            border-bottom: 3px solid $yellow;
+
+        }
+    }
+}
