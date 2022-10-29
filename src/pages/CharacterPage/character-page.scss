@@ -7,5 +7,37 @@
     &__img{
         width: 50%;
         object-fit: contain;
+        border-radius: 25px;
+    }
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        padding: 0 50px;
+        &__title{
+            color: $white;
+            font-size: 26px;
+            cursor: default;
+        }
+        &__text{
+            background-color: $white;
+            border-radius: 8px;
+            padding: 25px;
+            &:hover{
+                background-color: $dark-gray;
+                p{
+                    color: $white;
+                }
+            }
+            ul {
+                    list-style: none;
+
+                    li {
+                        font-size: 18px;
+                        color: $light-gray;
+                        margin-left: 25px;
+                    }
+                }
+        }
     }
 }
