@@ -4,3 +4,4 @@
 2. Add main page
 3. Add favorites page
 4. Characters page -> add pagination
+5. Start new
